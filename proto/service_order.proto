@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package service_order;
+
+message ErrorCode {
+    int32 code = 1;
+    string message = 2;
+}
+
+message BuyReq {
+    string token = 1;
+    string bookName = 2;
+}
+
+message BuyResp {
+    ErrorCode error_code = 1;
+    string message = 2;
+}
+
+service OrderService {
+    rpc Buy(BuyReq) returns (BuyResp);
+}
