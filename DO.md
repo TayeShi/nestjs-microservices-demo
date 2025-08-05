@@ -101,3 +101,25 @@ void bootstrap();
 bun run start:dev account-service
 
 分别实现account-service, order-service的逻辑且运行
+
+实现 gateway-http
+
+测试
+
+```bash
+curl --location 'localhost:8010/accounts/sign-in' \
+--header 'Content-Type: application/json' \
+--data '{
+    "username": "admin",
+    "password": "123456"
+}'
+```
+
+```bash
+curl --location 'localhost:8010/orders/buy' \
+--header 'Content-Type: application/json' \
+--data '{
+    "token": "zxcvbnm",
+    "bookName": "《书名》"
+}'
+```
