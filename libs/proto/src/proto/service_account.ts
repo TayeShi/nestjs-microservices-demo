@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 
-export const protobufPackage = "service_account";
+export const protobufPackage = 'service_account';
 
 export interface ErrorCode {
   code: number;
