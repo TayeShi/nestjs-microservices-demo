@@ -23,8 +23,6 @@ async function bootstrap() {
     },
   );
   await app.listen();
-
-  logger.debug('account-service start');
-  await app.listen();
+  logger.debug('order-service start');
 }
 void bootstrap();
